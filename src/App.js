@@ -1,20 +1,14 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
-// import EmployeeTable from './components/Table';
-import EmployeeTable from './components/EmployeeTable';
+import React from "react";
+import EmployeeTable from "../src/Components/EmployeeTable"
 
-// material imports
-import Container from '@material-ui/core/Container';
+
 
 function App() {
     return (
-        <>
-            <Header />
-            <Container fixed>
-                <EmployeeTable />
-            </Container>
-        </>
+        <div>
+            <h1>React Employee Tracker</h1>
+            <EmployeeTable />
+        </div>
     );
 }
 
