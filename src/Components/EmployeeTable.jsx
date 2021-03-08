@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../Utils/API";
+import MaterialTable from 'material-table';
 
 
 class EmployeeTable extends Component {
@@ -21,18 +22,11 @@ class EmployeeTable extends Component {
 
     render () {
         return (
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{this.state.data.employee_name}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <MaterialTable style={{marginTop: 25}}
+                title="Employee Directory"
+                columns={this.state.columns}
+                data={this.state.data}
+            />
         )
     }
 }
